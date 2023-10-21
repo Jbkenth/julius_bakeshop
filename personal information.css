@@ -1,0 +1,39 @@
+body{
+    font-family: Georgia, sans-serif;
+    background-color: lavender;
+}
+.up{
+    text-align: center;
+    background-color: #ff0000;
+    padding: 5px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+.down{
+    background-color: #fff;
+    padding: 5px;
+    width: 400px;
+    border-radius:0 0 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    font-size: 25px;
+}
+.name{
+    margin-left: 11%;
+}
+.br{
+    margin-top: 15px;
+}
+.name input{
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+}
+select{
+    height: 30px;
+    font-size: 20px;
+}
