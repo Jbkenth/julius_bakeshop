@@ -1,21 +1,338 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JULIUS BAKESHOP</title>
-        <link rel="stylesheet" type="text/css" href="order.css" />
-    </head>
-    <body>
-        <center><img class="img" src="julius.jpg" /></center>
-        <div class="block">
-            <form action="order round cake.html">
-            <center><button>Order Round Cake</button></center>
-            </form>
-            <br>
-            <center><button>Order Square Cake</button></center>
-            <br>
-            <center><button>Order 1 Layer Cake</button></center>
-            <br>
-            <center><button>Order 2 Layer Cake</button></center>
-        </div>
-    </body>
+<head>
+  <title>Julius Bakeshop</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<style>
+*{
+  margin: 0;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+}
+.form{
+  text-align: center;
+}
+select{
+  font-size: 30px;
+  text-align: center;
+  border: none;
+  background: none;
+}
+h1 select{
+  font-size: 35px;
+ font-weight: bold;
+}
+table{
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000;
+}
+td{
+  border: 1px solid #000;
+  padding: 5px;
+}
+input,textarea{
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  width: 200px;
+}
+label{
+  font-weight: bold;
+}
+.input,.input,.input{
+  display: none;
+}
+button{
+  font-size: 15px;
+}
+.p{
+  font-size: 20px;
+}
+.pp{
+  font-size: 10px;
+}
+.down{
+  font-size: 30px;
+}
+.status{
+  margin-top: 5px;
+}
+.s2{
+  font-size:12px;
+}
+</style>
+<body>
+  <div class="form">
+  <h1><select>
+    <optgroup label="Choose a branch">
+      <option disabled selected hidden>Choose a branch</option>
+      <option>TAYASAN</option>
+      <option>AYUNGON</option>
+    </optgroup>
+  </select></h1>
+    <label>ORDER</label><br>
+    <select id="cake" onchange="cake()">
+      <optgroup label="Cake">
+        <option disabled selected hidden>---------------</option>
+        <option value="src">Small Round Cake</option>
+        <option value="rc">Round Cake</option>
+        <option value="sc">Square Cake</option>
+      </optgroup>
+      <optgroup label="Layer Round Cake">
+        <option>2 layer Round Cake</option>
+        <option>3 Layer Round Cake</option>
+      </optgroup>
+      <optgroup label="Character Cake">
+        <option>Character Small Round Cake</option>
+        <option>Character Round Cake</option>
+        <option>Character Square Cake</option>
+      </optgroup>
+    </select>
+    <table>
+      <tr>
+        <td>MAMON:</td>
+        <td><select>
+          <option disabled selected hidden></option>
+          <option>Chocolate</option>
+          <option>Strawberry</option>
+          <option>Mocha</option>
+          <option>Pandan</option>
+          <option>Chiffon</option>
+          <option>Ube</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td>ICING:</td>
+        <td><select id="select1" onchange="jb1()">
+          <option disabled selected hidden></option>
+          <option id="panlalaki1" value="panlalaki1">Panlalaki</option>
+          <option id="pambabae1" value="pambabae1">Pambabae</option>
+          <option id="others1" value="others1">Others</option>
+        </select>
+          <input type="text" class="input" id="input1" onkeyup="jb1()"/></td>
+      </tr>
+      <tr>
+        <td>MOTIF:</td>
+        <td><select id="select2" onchange="jb2()">
+          <option disabled selected hidden></option>
+          <option value="panlalaki2">Panlalaki</option>
+          <option value="pambabae2">Pambabae</option>
+          <option id="others2" value="others2">Others</option>
+        </select>
+          <input type="text" class="input" id="input2" onkeyup="jb2()"/></td>
+      </tr>
+      <tr>
+        <td>DESIGN:</td>
+        <td><select id="select3" onchange="jb3()">
+          <option disabled selected hidden></option>
+          <option value="panlalaki3">Panlalaki</option>
+          <option value="pambabae3">Pambabae</option>
+          <option id="others3" value="others3">Others</option>
+        </select>
+          <input type="text" class="input" id="input3" onkeyup="jb3()"/></td>
+      </tr>
+      <tr>
+        <td>DATE:</td>
+        <td><select>
+          <option disabled selected hidden>Month</option>
+          <optgroup label="MONTH">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </optgroup>
+        </select>
+          <br>
+          <select>
+            <option disabled selected hidden>Day</option>
+          <optgroup label="DAY">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+           <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+          </optgroup>
+          </select>
+          <br>
+          <select>
+            <option disabled selected hidden>Year</option>
+            <optgroup label="YEAR">
+              <option>2023</option>
+            </optgroup>
+          </select>
+        </td>
+      </tr>
+      <td>PICK UP TIME:</td>
+      <td>
+        <select>
+          <option disabled selected hidden></option>
+          <option>10:00 a.m</option>
+          <option>11:00 a.m</option>
+          <option>12:00 p.m</option>
+          <option>1:00 p.m</option>
+          <option>2:00 p.m</option>
+          <option>3:00 p.m</option>
+          <option>4:00 p.m</option>
+          <option>5:00 p.m</option>
+          <option>6:00 p.m</option>
+        </select>
+      </td>
+      <tr>
+        <td>MESSAGE:</td>
+      <td>
+        <textarea style="resize:none;" rows="5" id="message" onkeyup="ms()"></textarea>
+      </td>
+      </tr>
+      <tr>
+        <td>DOWN:</td>
+        <td><input class="down" type="number" id="down" onkeyup="cake()"/></td>
+      </tr>
+      <tr>
+        <td>PRICE:</td>
+        <td><span id="price"></span></td>
+      </tr>
+      <tr>
+        <td>BAL:</td>
+        <td><span id="bal"></span></td>
+      </tr>
+      <tr>
+        <td><button onclick="generateNumber()" id="btn">TRANSACTION CODE:</button></td>
+        <td><span id="code"></span></td>
+      </tr>
+    </table>
+    <p class="status" id="status"></p>
+    <br>
+    <hr>
+    <br>
+    <p class="s2" id="status2"></p>
+    <p class="pp" id="message2"></p>
+    <p class="p"><b>Transaction Code:</b> <u><span id="code2"></span></u></p>
+    <p class="p"><b>Note:</b> please keep this code!! thank you..</p>
+  </div>
+  <script>
+  function generateNumber() {
+        var number = document.getElementById("code");
+        let d = document.getElementById("bt");
+        let k = document.getElementById("code2");
+        let e = document.getElementById("o");
+        number.innerHTML = Math.floor((Math.random()* 99) * 9);
+        k.style.fontWeight = "bold";
+        k.innerHTML = number.innerHTML;
+        if(!d.clicked == true){
+          d.disabled = true;
+        }
+      }
+  function ms(){
+    let a = document.getElementById("message");
+    let b = document.getElementById("message2");
+    b.innerHTML = a.value;
+  }
+  
+  function jb1(){
+    let a = document.getElementById("select1");
+    let b = document.getElementById("others1");
+    let c = document.getElementById("input1");
+    if(a.value == "others1"){
+      a.style.display = "none";
+      c.style.display = "block";
+    };
+    if(c.value == "aaa"){
+      a.style.display = "block";
+      c.style.display = "none";
+    }
+  }
+  
+  function jb2(){
+    let a = document.getElementById("select2");
+    let b = document.getElementById("others2");
+    let c = document.getElementById("input2");
+    if(a.value == "others2"){
+      a.style.display = "none";
+      c.style.display = "block";
+    };
+    if(c.value == "aaa"){
+      a.style.display = "block";
+      c.style.display = "none";
+    }
+  }
+  
+  function jb3(){
+    let a = document.getElementById("select3");
+    let b = document.getElementById("others3");
+    let c = document.getElementById("input3");
+    if(a.value == "others3"){
+      a.style.display = "none";
+      c.style.display = "block";
+    };
+    if(c.value == "aaa"){
+      a.style.display = "block";
+      c.style.display = "none";
+    }
+  }
+  function cake(){
+    let a = document.getElementById("cake");
+    let b = document.getElementById("price");
+    let c = document.getElementById("down");
+    let d = document.getElementById("bal");
+    let e = document.getElementById("status");
+    let f = document.getElementById("status2");
+    if(a.value == "src"){
+      b.innerHTML = 300;
+    };
+    if(a.value == "rc"){
+      b.innerHTML = 350;
+    };
+    if(a.value == "sc"){
+      b.innerHTML = 550;
+    };
+    if(c.value == b.innerHTML){
+      e.innerHTML = "FULLYPAID!!";
+    };
+    if(c.value != b.innerHTML){
+      e.innerHTML = "NOT FULLYPAID!!";
+    };
+    d.innerHTML = b.innerHTML - c.value;
+    f.innerHTML = e.innerHTML;
+  }
+  </script>
+</body> 
 </html>
