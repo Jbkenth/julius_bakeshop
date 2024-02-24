@@ -5,6 +5,29 @@
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>Julius Bakeshop Calculator</title>
+  <script>
+  // Get current date
+  var currentDate = new Date();
+
+  // Array of month names
+  var monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  // Array of day names
+  var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  // Get month name, day number, year, and day name
+  var monthName = monthNames[currentDate.getMonth()];
+  var dayNumber = currentDate.getDate();
+  var year = currentDate.getFullYear();
+  var dayName = dayNames[currentDate.getDay()];
+
+  // Update HTML content
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('currentDate').innerHTML = monthName + ' ' + dayNumber + ', ' + year + ' (' + dayName + ')';
+  });
+  </script>
 </head>
 <style>
 *{
@@ -38,6 +61,8 @@ td{
 }
 </style>
 <body>
+  <p style="text-align:center;font-size:40px;" id="currentDate">Loading...</p>
+  <p style="text-align:center;font-size:40px;">TAYASAN</p>
   <table>
     <tr>
       <td>Pesos</td>
